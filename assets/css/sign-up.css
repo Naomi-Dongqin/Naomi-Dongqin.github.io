@@ -1,0 +1,45 @@
+.container {
+    background-color: aliceblue;
+    border: 2px solid #04bd76;
+    color:#ffb300;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto; /* Center the container horizontally */
+    width: 40%; /* Set the width of the container */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+ .container p{
+    font-size:30px;
+    font-family: serif;
+}
+
+/* Style for form groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Style for labels */
+label {
+    font-weight: bold;
+    color:#04bd76;
+}
+
+/* Style for input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style for submit button */
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #04bd76;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

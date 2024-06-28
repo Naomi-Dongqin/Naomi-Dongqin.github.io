@@ -1,0 +1,67 @@
+/* Style for the section containing featured meal kits */
+#featured {
+    padding: 20px;
+}
+
+/* Style for the heading within the featured section */
+#featured h2 {
+    font-size: 1.5em;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px;
+    padding: 0 40px; /* Adjust padding */
+}
+
+
+
+/* Style for category section */
+.featured-meal-kits {
+    margin-bottom: 40px; /* Add margin between category sections */
+}
+
+/* Style for each meal kit card */
+.meal-kit-card {
+    background-color: #eff4e3;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Style for meal kit card image */
+.meal-kit-card img {
+    width: 100%;
+    height: auto;
+   
+}
+
+/* Style for meal kit card details */
+.meal-kit-details {
+    padding: 20px;
+   
+}
+
+/* Style for meal kit card title */
+.meal-kit-details h3 {
+    font-size: 1.2em;
+    margin-top: 0;
+    color: #ea7500;
+}
+
+/* Style for meal kit card description */
+.meal-kit-details p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.meal-kit-details ul {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #666;
+}
+

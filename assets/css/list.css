@@ -1,0 +1,165 @@
+/* Title */
+h1 {
+    font-family: 'Righteous', sans-serif;
+    color: #ea7500;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    margin-bottom: 5px; /* Add margin bottom */
+}
+
+/* Buttons */
+.button-8 {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 24px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all .3s ease;
+    background:rgb(121, 197, 186);
+    color: rgba(255,255,255,0.95);
+    filter: drop-shadow(0);
+    font-weight: bold;
+    margin:10px 10px; 
+    
+}
+
+.button-8:hover {
+    transform: scale(1.125);
+    border-color: rgba(255, 255, 255, 0.9);
+    filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
+}
+
+
+/* Remove background styles */
+body {
+    background: none;
+    font-family: Arial, sans-serif; /* Change font family to Arial */
+}
+
+.container {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: whitesmoke;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);  
+    padding: 10px;  
+    filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Add gap between columns */
+}
+
+.column {
+    flex: 0 0 calc(33.33% - 20px); /* Adjust column width for 3 columns */
+    max-width: calc(33.33% - 20px); /* Adjust max width for 3 columns */
+    margin-bottom: 20px; /* Add space between rows */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Add border */
+    border-radius: 12px; /* Add border radius */
+    background-color: rgb(121, 197, 186); /* Add background color */
+}
+
+.meal-kit-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    background-color: #fff; /* Add background color */
+}
+
+.banner-image {
+    height: 200px; /* Adjust image height */
+    overflow: hidden;
+    border-radius: 12px 12px 0 0; /* Round top corners */
+}
+
+.banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.meal-kit-details {
+    padding: 10px;
+}
+
+.meal-kit-details h1 {
+    margin-top: 0;
+    font-family: Arial, sans-serif; /* Change font family to Arial */
+    color: rgba(255,255,255,0.98);
+    font-size: 1rem; /* Adjust title font size */
+}
+
+.meal-kit-details p {
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif; /* Change font family to Arial */
+    color: #fff;
+    text-align: center;
+    font-size: 0.7rem; /* Adjust description font size */
+    line-height: 100%;
+    letter-spacing: 0.3px;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.button-wrapper a {
+    margin: 0 10px; /* Adjust button margin */
+}
+
+.btn {
+    padding: 10px 20px; /* Adjust button padding */
+    border: none;
+    border-radius: 24px;
+    font-size: 0.8rem; /* Adjust button font size */
+    letter-spacing: 1px;  
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.btn.outline {
+    background: rgba(0, 212, 255, 0.9);
+    color: rgba(255,255,255,0.95);
+    filter: drop-shadow(0);
+    font-weight: bold;
+}
+
+.btn.fill {
+    background: rgba(0, 212, 255, 0.9);
+    color: rgba(255,255,255,0.95);
+    filter: drop-shadow(0);
+    font-weight: bold;
+}
+
+.btn:hover {
+    transform: scale(1.125);
+    border-color: rgba(255, 255, 255, 0.9);
+    filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 992px) {
+    .column {
+        flex: 0 0 calc(50% - 20px); /* Adjust column width for 2 columns */
+        max-width: calc(50% - 20px); /* Adjust max width for 2 columns */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .column {
+        flex: 0 0 calc(100% - 20px); /* Adjust column width for 1 column */
+        max-width: calc(100% - 20px); /* Adjust max width for 1 column */
+    }
+}

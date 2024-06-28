@@ -1,0 +1,56 @@
+/* special format for on-the-menu page */
+/* Responsive layout using CSS Grid and Flexbox */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+    padding: 0 40px; /* Adjust padding */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    .container {
+        padding: 0 10px;
+    }
+}
+
+/* Style for category section */
+.category-section {
+    margin-bottom: 40px; /* Add margin between category sections */
+}
+
+/* Style for meal-kit-card */
+.meal-kit-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure the frame contains the image */
+}
+
+/* Style for meal-kit-frame */
+.meal-kit-frame {
+    padding: 20px;
+    border: 1px solid #ccc; /* Add a border around the frame */
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Style for meal-kit-frame h3 */
+.meal-kit-frame h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+/* Style for meal-kit-frame p */
+.meal-kit-frame p {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+/* Style for meal-kit-card image */
+.meal-kit-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

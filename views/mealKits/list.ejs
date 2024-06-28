@@ -1,0 +1,51 @@
+<head>
+    <link rel="stylesheet" href="/css/list.css">
+</head>
+
+<h1>All Meal Kits List</h1>
+
+
+<a href="/load-data/mealKits/"><button class="button-8" role="button">Load Data</button></a>
+
+<a href="/mealKits/add"><button class="button-8" role="button">Add</button></a>
+
+
+    <div class="container">
+        <div class="row">
+        <div class="wrapper">
+            <% if (mealKitsList && mealKitsList.length > 0) { %>
+                <!-- Render each meal kit within the list -->
+                <% mealKitsList.forEach(mealKit => { %>
+                    <div class="column">
+                        <div class="meal-kit-card">
+                        <div class="banner-image"> 
+                        <img src="/mealKit-pic/<%= mealKit.imageUrl %>" alt="<%= mealKit.title %>">
+                    </div>
+                </div>
+                        <div class="meal-kit-details">
+                            <h1><%= mealKit.title %></h1>
+                            <p><%= mealKit.description %></p>
+                            <div class="button-wrapper"> 
+                                <a href="/mealkits/edit/<%= mealKit._id %>"><button class="btn outline">Edit</button></a>
+                                <a href="/mealkits/remove/<%= mealKit._id %>"><button class="btn fill">Delete</button></a>
+                            </div>
+                       
+                    </div>
+                </div>
+                <% }); %>
+            <% } else { %>
+                <p>No meal kits found.</p>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+

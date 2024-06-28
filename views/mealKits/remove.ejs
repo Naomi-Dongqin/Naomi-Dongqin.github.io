@@ -1,0 +1,6 @@
+<p>Delete mealKit?</p>
+<p>All references will be lost if you delete the mealKit</p> 
+<form method="post" action="/mealKits/remove/<%= mealKit._id %>" enctype="multipart/form-data">
+    <button type="button" onclick="window.location.href='/mealKits/list'">Keep</button>
+    <input type="submit" value="Confirm"/>
+</form>

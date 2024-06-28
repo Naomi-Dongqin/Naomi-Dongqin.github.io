@@ -1,0 +1,85 @@
+
+<!--display the mealkits-->
+    <% layout = '../layouts/main' %>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Home</title>
+       
+        <link rel="stylesheet" href="/css/site.css">
+        <link rel="stylesheet" href="/css/home.css">
+       
+    </head>
+    <body>
+       
+            <div class="hero">
+                <img id="hero-iamge" src="/images/backgroup.jpg" alt="Green Food">
+                <div class="hero-text">
+                    <h1 class="font-bold text-xl">Welcome to Fresh Eatery!<br/></h1>
+                    <h2> Organic, fresh, and healthy!</h2>
+                    <br/><br/><br/>
+                    <p>Discover the essence of your meals</p>
+                    <p>Entering food unique code and tracing them back to our farm!</p>
+                    <form class="search-form" action="#" method="GET">
+                        <input type="text" name="search" placeholder="Enter code number">
+                        <input type="submit" value="Search">
+                    </form>
+                </div>
+            </div>
+            <!-- Content section -->
+                <section class="content-section">
+                    <div class="card">
+                        <figure><img src="/images/main_food_1.jpg" alt="Organic and Fresh Ingredients" /></figure>
+                        <div class="card-body">
+                          <h2 class="card-title">Organic & Fresh Ingredients</h2>
+                          <p>We use only organic and fresh ingredients to create delicious and healthy meals for you.</p>
+                          <div class="card-actions">
+                            <button class="btn">Order Now</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <figure><img src="/images/main_food_2.jpg" alt="Balanced Nutrition" /></figure>
+                        <div class="card-body">
+                          <h2 class="card-title">Balanced Nutrition</h2>
+                          <p>Our chefs carefully cook with a variety of foods to ensure your meals are balanced and nutritious.</p>
+                          <div class="card-actions">
+                            <button class="btn">Order Now</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <figure><img src="/images/main_food_3.jpg" alt="Free Daily Delivery" /></figure>
+                        <div class="card-body">
+                          <h2 class="card-title">Free Daily Delivery</h2>
+                          <p>Enjoy the convenience of free daily delivery, bringing fresh and wholesome meals straight to your doorstep.</p>
+                          <div class="card-actions">
+                            <button class="btn">Order Now</button>
+                          </div>
+                        </div>
+                      </div>
+                </section>
+      
+<!-- Featured meal kits -->
+<section id="featured">
+    <h2> Featured Mealkits</h2>
+</section>
+<section class="featured-meal-kits">
+    <!-- Iterate and include mealkit partial -->
+    <div class="container"> 
+    <% mealKits.forEach(function(mealKit) { %>      
+        <% if(mealKit.featuredMealKit) { %>
+        <%- include('../partials/mealKit', {mealKit:mealKit}) %>   
+        <% } %>
+  
+   <% }); %>
+</div>
+</section>
+
+
+</body>
+
+    
+

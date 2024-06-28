@@ -1,0 +1,51 @@
+
+<% layout = '../layouts/main' %>
+<head>
+    <link rel="stylesheet" href="/css/log-in.css">
+</head>
+
+<!-- Log in form -->
+<main>
+    <div class="container">
+        <% if(typeof errors !=="undefined" && errors.length!==0) { %>
+            <% errors.forEach(err=> { %>
+              <p style="color:red;"><%= err %></p>
+             <% }) %>
+         <% } %>
+
+        <form action="/log-in" method="post">
+            <p>Welcome back!</p>
+            <div class="form-group">
+                <label for="email">Email*</label><br/>
+                <input type="text" id="email" name="email"  value="<%=values.email%>"><br/><br/>
+                <% if( validationMessage.email){%>
+                    <span style="color:red"><%= validationMessage.email%></span><br/><br/>
+                 <% } %>
+               
+                <label for="password">Password*</label><br/>
+                <input type="password" id="password" name="password"  value="<%=values.password%>"><br/><br/>
+                <%if(validationMessage.password){%>
+                    <span style="color:red"><%=validationMessage.password%></span><br/><br/>
+                 <%}%>
+
+              
+
+            <div class="radio-input-wrapper">
+                <label class="label">
+                  <input value="data entry clerk" name="role" id="data entry clerk" class="radio-input" type="radio">
+                  <div class="radio-design"></div>
+                  <div class="label-text">Clerk</div>
+                </label>
+                <label class="label">
+                  <input value="customer" name="role" id="customer" class="radio-input" type="radio">
+                  <div class="radio-design"></div>
+                  <div class="label-text">Customer</div>
+                </label>
+              </div>
+            
+            <button type="submit">Log In</button>
+           
+        </form>
+    </div>
+</main>
+

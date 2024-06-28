@@ -1,0 +1,281 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size:1em;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+   
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav {
+    width:1200px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border: 2px solid #04bd76;
+    align-items: center;
+}
+
+nav a {
+    color:#04bd76;
+    text-decoration:solid;
+}
+nav a:hover{
+    color:chocolate;
+}
+
+
+#logo{
+    width:120px;
+    height:auto;
+    margin: 40px;
+}
+
+.hero{
+    position:relative;
+    overflow:hidden; 
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+}
+
+.hero img{
+    width:100%;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.hero-text{
+    position: absolute;
+    
+    top: 30%;
+    left:40%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 80%; 
+}
+   /* Media query for smaller screens */
+   @media only screen and (max-width: 768px) {
+    body {
+        font-size: 50%; /* Half the default font size */
+    }
+    
+}
+
+/* Style the input field and button */
+.hero-text .search-form {
+    position: relative;
+}
+
+.hero-text input[type="text"] {
+    padding: 10px;
+   
+    margin-top: 20px;
+    width: 50%; 
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.hero-text input[type="submit"] {
+    top: 0;
+    right: 0;
+    padding: 10px;
+   
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ea7500;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Style the input field on focus */
+.hero-text input:focus {
+    border-color: #4CAF50; 
+    outline: none;
+}
+
+/* Style the search buttons */
+.search-button {
+    background-color: #ffb300;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #45a049;
+}
+
+/* Content section styles */
+
+.content-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; /* Adjust the gap between grid items */
+    padding: 10px 30px; /* Adjust padding */
+    
+}
+
+/* Style for each card within the content section */
+.card {
+    padding: 0px 5px 0px 5px;
+    background-color: #edeaea;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Style for card images */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners only at the top */
+}
+
+/* Style for card body */
+.card-body {
+  
+    color: #666;
+   
+}
+
+/* Style for card title */
+.card-title {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 0;
+    color: #ea7500;
+}
+
+/* Style for card description */
+.card-description {
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+/* Style for card actions */
+.card-actions {
+    display: flex;
+    justify-content: center; /* Align actions to the right */
+}
+
+/* Style for buttons within cards */
+.card-actions button {
+    
+    background-color: #ffb300;
+    color: #fff;
+    padding: 10px 20px; /* Adjust button padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for buttons */
+.card-actions button:hover {
+    background-color: #45a049;
+}
+
+
+
+
+/* Footer styles */
+
+footer {
+    background-color:#c0ca33;
+    color: #fff;
+    padding: 20px;
+    text-align:left;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: space-around;
+
+}
+
+
+.footer-menu, .social-media-links, .company-information, .contact-info, .payment {
+    width: 100%; 
+    margin-bottom: 20px;
+}
+
+.footer-menu a, .social-media-links p, .company-information p, .contact-info p {
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.social-media-links h4, .payment h4 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.social-media-row {
+    display: flex;
+    justify-content: space-between;
+    width:150px;
+}
+
+.social-media-links img {
+    width: 30px;
+    height: auto;
+    
+}
+
+
+.payment img {
+    width: 30px; 
+    height: auto;
+    margin-top: 10px;
+}
+
+.copyright-statement {
+    
+    margin-top: 20px;
+}
+ /* Media query for smaller screens */
+ @media only screen and (max-width: 200px) {
+    .footer-columns {
+        grid-template-columns: 1fr; /* Display only one column on smaller screens */
+    }
+
+    footer {
+        padding: 20px; /* Adjust padding as needed */
+    }
+
+    .payment img {
+        width: 30%; /* Adjust image width for smaller screens */
+    }
+     .social-media-links img {
+        width: 30%; /* Adjust image width for smaller screens */
+    }
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

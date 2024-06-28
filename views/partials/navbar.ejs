@@ -1,0 +1,20 @@
+<nav id="navbar">
+    <!-- Navbar content goes here -->
+    <a href="/">Home</a>
+    <a href="/mealKits/on-the-menu">On-the-menu</a>
+        
+    <% if (typeof user === "undefined") { %>
+        <a href="/sign-up">Sign-up</a>
+        <a href="/log-in">Log-in</a>
+    <% } else { %> 
+        <% if (role === "customer") { %>
+            <span style="color:#04bd76;" >Hello <a style="color: blueviolet;" href="/cart"><%= user.firstName %></a></span>
+        <% } else { %>
+           
+            <span style="color:#04bd76;">Hello <a style="color: blueviolet;" href="/mealKits/list"><%= user.firstName %></a></span>
+        <% } %>
+        <a href="/log-out">Log-out</a>
+    <% } %>
+
+    <div class="dropdown-icon">&#9776;</div> <!-- This icon will show on smaller screens -->
+</nav>

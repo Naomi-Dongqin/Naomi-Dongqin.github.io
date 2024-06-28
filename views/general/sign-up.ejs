@@ -1,0 +1,47 @@
+
+<% layout = '../layouts/main' %>
+
+<!-- Sign up form -->
+<head>
+     <!-- Link the CSS file -->
+     <link rel="stylesheet" href="/css/sign-up.css">
+</head>
+ 
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <form action="/sign-up" method="post">
+                <div>
+                <p>Sign up without any cost!</p>
+          
+                <div class="form-group">
+                    <label for="first_name">First Name*</label>
+                    <input type="text" id="first_name" name="firstName"  value="<%=values.firstName%>" ><br/><br/>
+                    <% if(validationSignUpMessage.firstName){%>
+                        <span style="color:red"><%= validationSignUpMessage.firstName%></span><br/>/
+                     <% } %>
+                    <label for="last_name">Last Name*</label>
+                    <input type="text" id="last_name" name="lastName"  value="<%=values.lastName%>" ><br/><br/>
+
+                    <label for="email">Email*</label>
+                    <input type="text" id="email" name="email"  value="<%=values.email%>" ><br/><br/>
+                    <% if(validationSignUpMessage.email){%>
+                        <span style="color:red"><%= validationSignUpMessage.email%></span><br/><br/>
+                     <% } %>
+                     
+                    <label for="password">Password*</label>
+                    <input type="text" id="password" name="password"  value="<%=values.password%>" ><br/><br/>
+                    <% if(validationSignUpMessage.password){%>
+                        <span style="color:red"><%= validationSignUpMessage.password%></span><br/><br/>
+                     <% } %>
+                </div>
+                <div class="signup-button">
+                <button type="submit">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+  
+
+

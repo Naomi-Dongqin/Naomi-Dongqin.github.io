@@ -1,0 +1,96 @@
+body {
+    background-color: #EDEEE9;
+    color: rgb(121, 197, 186);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    padding: 0.5vh 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the form horizontally */
+  }
+
+h1 {
+    font-size: clamp(1rem, 4vw, 8rem);
+    margin: 1vh 0 2rem;
+}
+
+.form {
+    align-self: center;
+}
+
+.form__input {
+    width: clamp(120px, 50vw, 420px);
+    height: 2.5rem;
+    padding: 0 1.25rem;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin-bottom: 1rem; /* Add margin bottom to separate input fields */
+    transition: all 250ms;
+}
+
+@media (min-width: 768px) {
+    .form__input {
+        width: clamp(120px, 35vw, 420px);
+    }
+}
+
+.form__input:focus {
+    outline: none;
+    border-top-color: rgba(0, 0, 0, 0.1);
+}
+
+.form__input:focus + .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+    transform: translateY(-4.50rem) scale(1);
+    color: orange;
+}
+
+.form__input::placeholder {
+    color: transparent;
+}
+
+.form__input:not(:placeholder-shown) {
+    border-top-color: rgba(0, 0, 0, 0.5);
+}
+
+.form__label {
+    font-size: 1rem;
+    color: grey;
+    display: block;
+    margin-bottom: 0.5rem; /* Add margin bottom to separate labels */
+    /* Adjust transform values as needed */
+    transform: translate(1.25rem, -2.5rem);
+    transform-origin: 0 0;
+    transition: all 500ms;
+    pointer-events: none;
+}
+
+.checkbox-container {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10px; /* Adjust margin as needed */
+}
+
+/* Buttons */
+.button-8 {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 24px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all .3s ease;
+    background: orange;
+    color: rgba(255, 255, 255, 0.95);
+    filter: drop-shadow(0);
+    font-weight: bold;
+    margin: 10px 5px; /* Adjust margin between button and checkbox */
+}
+
+.button-8:hover {
+    transform: scale(1.125);
+    border-color: rgba(255, 255, 255, 0.9);
+    filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+}
